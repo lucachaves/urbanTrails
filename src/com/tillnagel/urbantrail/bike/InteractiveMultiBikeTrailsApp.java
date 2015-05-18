@@ -6,7 +6,6 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 import processing.core.PApplet;
-import codeanticode.glgraphics.GLConstants;
 
 import com.tillnagel.urbantrail.map.GlowLinesMarker;
 
@@ -44,7 +43,7 @@ public class InteractiveMultiBikeTrailsApp extends PApplet {
 	int mapWidth = width, mapHeight = 1000;
 
 	public void setup() {
-		size(width, height, GLConstants.GLGRAPHICS);
+		size(width, height, OPENGL);
 
 		// map = new UnfoldingMap(this, 0, 0, 1200, 700, new MyMapBox.WorldDarkMapProvider());
 		// map = new UnfoldingMap(this, 0, 0, mapWidth, mapHeight, new

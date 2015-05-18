@@ -6,7 +6,6 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 import processing.core.PApplet;
-import codeanticode.glgraphics.GLConstants;
 
 import com.tillnagel.urbantrail.map.GlowLinesMarker;
 
@@ -51,7 +50,7 @@ public class InteractiveMultiBikeTrailsSaveLargeImageApp extends PApplet {
 	LargeMapImageUtils lmiUtils;
 	
 	public void setup() {
-		size(width, height, GLConstants.GLGRAPHICS);
+		size(width, height, OPENGL);
 
 		// map = new UnfoldingMap(this, 0, 0, 1200, 700, new MyMapBox.WorldDarkMapProvider());
 		map = new UnfoldingMap(this, 0, 0, mapWidth, mapHeight, new MBTilesMapProvider("jdbc:sqlite:./berlin-dark.mbtiles"));
@@ -68,8 +67,8 @@ public class InteractiveMultiBikeTrailsSaveLargeImageApp extends PApplet {
 
 		// Load bike trails from GPX files
 		// String dir = sketchPath("runkeeper-2012-Aug-Sep");
-		String dir = sketchPath("runkeeper-all");
-		//String dir = sketchPath("test");
+//		String dir = sketchPath("runkeeper-all");
+		String dir = sketchPath("test");
 		String[] gpsFileNames = FileUtils.listFile(dir, "gpx");
 		for (String gpsFileName : gpsFileNames) {
 			loadAndCreateMarkers(gpsFileName);

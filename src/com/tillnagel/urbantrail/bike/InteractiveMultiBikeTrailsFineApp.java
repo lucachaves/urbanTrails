@@ -5,7 +5,6 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 import processing.core.PApplet;
-import codeanticode.glgraphics.GLConstants;
 
 import com.tillnagel.urbantrail.map.GlowLinesFineMarker;
 
@@ -39,7 +38,7 @@ public class InteractiveMultiBikeTrailsFineApp extends PApplet {
 	TimeRangeSlider timeRangeSlider;
 
 	public void setup() {
-		size(1200, 780, GLConstants.GLGRAPHICS);
+		size(1200, 780, OPENGL);
 
 		// map = new UnfoldingMap(this, 0, 0, 1200, 700, new MyMapBox.WorldDarkMapProvider());
 		map = new UnfoldingMap(this, 0, 0, 1200, 700, new MBTilesMapProvider("jdbc:sqlite:./berlin-dark.mbtiles"));

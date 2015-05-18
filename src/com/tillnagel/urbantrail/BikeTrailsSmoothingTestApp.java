@@ -53,7 +53,8 @@ public class BikeTrailsSmoothingTestApp extends PApplet {
 		MapUtils.createDefaultEventDispatcher(this, map);
 
 		// Create marker
-		List<Feature> features = GPXReader.loadData(this, "runkeeper-2012-Aug-Sep/RK_gpx _2012-09-13_1030.gpx");
+//		List<Feature> features = GPXReader.loadData(this, "runkeeper-2012-Aug-Sep/RK_gpx _2012-09-13_1030.gpx");
+		List<Feature> features = GPXReader.loadData(this, "test/RK_gpx _2012-09-15_1506.gpx");
 		println("Loaded " + features.size() + " features");
 		MarkerFactory markerFactory = new MarkerFactory();
 		List<Marker> markers = markerFactory.createMarkers(features);
